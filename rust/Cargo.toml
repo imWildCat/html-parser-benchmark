@@ -6,5 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-html5ever = "0.25.1"
-markup5ever_rcdom = "0.1"
+kuchiki = "0.8.1"
