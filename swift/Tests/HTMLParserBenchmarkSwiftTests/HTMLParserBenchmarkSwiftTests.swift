@@ -31,7 +31,7 @@ final class HTMLParserBenchmarkSwiftTests: XCTestCase {
 
         let end = Date()
 
-        print("Duration:" + String(end.timeIntervalSince(start) * 1000))
+        print("Duration:" + String(end.timeIntervalSince(start) * 1000) + "ms")
     }
 
     func loadWikipediaHTML() throws -> String {
