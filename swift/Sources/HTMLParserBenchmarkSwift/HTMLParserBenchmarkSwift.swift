@@ -1,6 +1,7 @@
 // Created 2/13/22
 
 import SwiftSoup
+import Foundation
 
 public struct HTMLParserBenchmarkSwift {
     public private(set) var text = "Hello, World!"

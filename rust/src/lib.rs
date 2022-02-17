@@ -17,7 +17,7 @@ mod tests {
         let start_time = std::time::Instant::now();
 
         // test 100,000 times
-        for _ in 0..100_000 {
+        for _ in 0..10_000 {
             let title_element = document.select("title").unwrap().next().unwrap();
             let title_text = title_element.text_contents();
             assert_eq!(title_text, expectation.title);
