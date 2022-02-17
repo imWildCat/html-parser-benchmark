@@ -7,7 +7,8 @@ struct WikipediaExpectation {
 mod tests {
     use crate::WikipediaExpectation;
     use kuchiki::traits::TendrilSink;
-    use std::{borrow::Borrow, io::Read};
+    use std::fs;
+    use std::io::Read;
 
     #[test]
     fn run_test() {
@@ -16,7 +17,6 @@ mod tests {
         let expectation = load_expectations();
         let start_time = std::time::Instant::now();
 
-        // test 100,000 times
         for _ in 0..10_000 {
             let title_element = document.select("title").unwrap().next().unwrap();
             let title_text = title_element.text_contents();
@@ -32,12 +32,15 @@ mod tests {
         }
 
         let end_time = std::time::Instant::now();
+        let duration = end_time.duration_since(start_time).as_millis();
+        print!("Duration: {}", duration);
+        // write duration to result.txt
 
-        print!("Duration: {}", end_time.duration_since(start_time).as_millis());
+        let duration_str = format!("{}", duration);
+        fs::write("target/result.txt", duration_str).unwrap();
     }
 
     fn load_wikipedia_html() -> String {
-        // read file named wikipedia.html
         let mut file =
             std::fs::File::open("../fixtures/wikipedia/wikipedia_on_wikipedia.html").unwrap();
         let mut html = String::new();

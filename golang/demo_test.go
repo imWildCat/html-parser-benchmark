@@ -2,6 +2,7 @@ package main
 
 import (
 	"io/ioutil"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -38,6 +39,11 @@ func TestDemo(t *testing.T) {
 	duration := endTime.Sub(startTime)
 
 	t.Logf("duration: %dms\n", duration.Milliseconds())
+
+	err = ioutil.WriteFile("result.txt", []byte(strconv.Itoa(int(duration.Milliseconds()))), 0644)
+	if err != nil {
+		t.Fatal(err)
+	}
 }
 
 func loadWikipediaHTML(t *testing.T) string {
