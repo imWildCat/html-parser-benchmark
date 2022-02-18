@@ -12,4 +12,4 @@ collect-dependencies:
 	cd scripts && make collect-dependencies
 
 gen-report:
-	cd scripts && npm run build
+	cd scripts && npm run build-out

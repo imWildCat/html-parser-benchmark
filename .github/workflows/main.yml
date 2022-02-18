@@ -31,8 +31,8 @@ jobs:
     - name: Generate Reports
       run: make gen-report
       shell: bash
-    - uses: actions/upload-artifact@v2
-      if: ${{ always() }}
+    - name: Persist Benchmark result
+      uses: actions/upload-artifact@v2
       with:
-        name: Benchmark result
+        name: benchmark_result_${{ matrix.os }}
         path: scripts/output.md
