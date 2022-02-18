@@ -17,10 +17,12 @@ jobs:
         rust-version: stable
     - uses: actions/setup-node@v1
     - uses: microsoft/playwright-github-action@v1
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Install dependencies
+      run: make collect-dependencies
+    - name: Run Benchmarks
+      run: make test
+    - name: Generate Reports
+      run: make gen-report
     - uses: actions/upload-artifact@v2
       if: ${{ always() }}
       with:

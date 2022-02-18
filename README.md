@@ -1,5 +1,12 @@
 # HTML Parser Benchmark of Go, JavaScript, Rust and Swift
 
+## Design
+
+This benchmark is designed to measure the performance of HTML parsing libraries of different programming languages.
+The only fixture at this moment is the HTML source code of <http://en.wikipedia.org/wiki/Wikipedia>. It is about 1.0 Megabytes in size.
+
+Only using CSS Selector to find HTML elements is currently tested in this benchmark. The repeat time is current `10,000` (10k).
+
 ## Results
 
 ### Apple M1 Max
