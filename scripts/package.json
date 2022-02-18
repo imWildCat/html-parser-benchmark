@@ -1,0 +1,15 @@
+{
+  "name": "html-parser-benchmark-scripts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gen_report.ts",
+  "scripts": {
+    "build": "ts-node gen_report.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  }
+}

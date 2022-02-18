@@ -1,0 +1,19 @@
+{
+  "name": "javascript-html-parser-benchmark",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "node-bench": "node node/benchmark.js",
+    "browser-bench": "node browser/browser.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.19.1"
+  },
+  "dependencies": {
+    "jsdom": "^19.0.0"
+  }
+}
