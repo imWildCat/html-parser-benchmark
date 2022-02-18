@@ -1,0 +1,2 @@
+collect-dependencies:
+	npm install

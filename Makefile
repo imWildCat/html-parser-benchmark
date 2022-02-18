@@ -9,6 +9,7 @@ collect-dependencies:
 	cd javascript && make collect-dependencies
 	cd rust && make collect-dependencies
 	cd swift && make collect-dependencies
+	cd scripts && make collect-dependencies
 
 gen-report:
 	cd scripts && npm run build
