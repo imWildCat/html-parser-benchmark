@@ -4,7 +4,8 @@
   "description": "",
   "main": "gen_report.ts",
   "scripts": {
-    "build": "ts-node gen_report.ts"
+    "build": "ts-node gen_report.ts",
+    "build-out": "ts-node gen_report.ts > output.md"
   },
   "author": "",
   "license": "MIT",

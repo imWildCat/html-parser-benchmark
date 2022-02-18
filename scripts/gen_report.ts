@@ -24,8 +24,7 @@ const result: Record<string, string> = {
 
 const keys = Object.keys(result);
 
-let output = `
-| Language | Duration |
+let output = `| Language | Duration |
 |-------|------|
 `
 
