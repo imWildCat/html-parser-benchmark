@@ -22,6 +22,32 @@ Only using CSS Selector to find HTML elements is currently tested in this benchm
 | JavaScript (WebKit) | 5ms |
 | JavaScript (Firefox) | 4ms |
 
+### GitHub Actions (Ubuntu)
+
+| Language | Duration |
+|-------|------|
+| Rust (kuchiki, html5ever) | 13ms |
+| Go (goquery) | 9022ms |
+| Swift (Kanna, libxml2) | 19228.30ms |
+| Swift (SwiftSoup) | 213742.24ms |
+| JavaScript (Node.js, jsdom) | 360ms |
+| JavaScript (Chromium) | 11ms |
+| JavaScript (WebKit) | 4ms |
+| JavaScript (Firefox) | 9ms |
+
+### GitHub Actions (macOS)
+
+| Language | Duration |
+|-------|------|
+| Rust (kuchiki, html5ever) | 20ms |
+| Go (goquery) | 9212ms |
+| Swift (Kanna, libxml2) | 22269.05ms |
+| Swift (SwiftSoup) | 220971.89ms |
+| JavaScript (Node.js, jsdom) | 742ms |
+| JavaScript (Chromium) | 13ms |
+| JavaScript (WebKit) | 7ms |
+| JavaScript (Firefox) | 8ms |
+
 ## License
 
 MIT
