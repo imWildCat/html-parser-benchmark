@@ -1,4 +1,4 @@
-all:
+test:
 	cd golang && make test
 	cd javascript && make test
 	cd rust && make test
